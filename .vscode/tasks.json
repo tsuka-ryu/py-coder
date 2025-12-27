@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "acc new",
+            "type": "shell",
+            "command": "acc new ${input:contestName}",
+            "problemMatcher": []
+        },
+        {
+            "label": "execute python",
+            "type": "shell",
+            "command": "cd ${fileDirname} && uv run python ${fileBasename}",
+            "problemMatcher": []
+        },
+        {
+            "label": "oj test",
+            "type": "shell",
+            "command": "cd ${fileDirname} && uv run oj t -c \"python ${fileBasename}\" -d tests",
+            "problemMatcher": []
+        },
+        {
+            "label": "acc submit",
+            "type": "shell",
+            "command": "cd ${fileDirname} && echo abc$(basename $(pwd)) | acc s ${file} -- --guess-python-interpreter pypy",
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "contestName",
+            "type": "promptString",
+            "description": "Contest name (e.g., abc123):"
+        }
+    ]
+}
