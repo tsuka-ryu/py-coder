@@ -1,0 +1,7 @@
+{
+    "command-runner.commands": {
+        "acc new": "read -p 'Contest name: ' contest && acc new \"$contest\"",
+        "oj test": "cd ${fileDirname} && uv run oj t -c \"python ${fileBasename}\" -d tests",
+        "acc submit": "cd ${fileDirname} && echo abc$(basename $(pwd)) | acc s ${file} -- --guess-python-interpreter pypy"
+    }
+}
