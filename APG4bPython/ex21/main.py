@@ -1,8 +1,6 @@
-import sys
-from collections import deque, Counter
+A, B = map(int, input().split())
 
-def main():
-    pass
-
-if __name__ == "__main__":
-    main()
+for x in range(256):
+    if A ^ x == B:
+        print(x)
+        break

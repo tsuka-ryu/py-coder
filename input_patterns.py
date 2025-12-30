@@ -15,6 +15,7 @@ N, M = list(map(int, input().split()))
 a = [list(map(int, input().split())) for _ in range(N)]
 ## 要素がある場合
 AB = [list(map(int, input().split())) for i in range(M)]
+AB = [tuple(map(int, input().split())) for i in range(N)]
 
 # 要素がすべて0の二次元配列
 N, M = list(map(int, input().split()))
