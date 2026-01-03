@@ -9,6 +9,9 @@ A, B = map(int, input().split())
 # 配列
 A = list(map(int, input().split()))
 
+# すべて-1の配列
+memo = F = [-1 for _ in range(50)]
+
 # 二次元配列
 N, M = list(map(int, input().split()))
 ## 要素がない場合
